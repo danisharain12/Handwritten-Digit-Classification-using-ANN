@@ -33,21 +33,21 @@ To train a neural network that can accurately classify 28x28 grayscale images of
 
 - model = Sequential()
 
-# Flattening the 2D input images
+#Flattening the 2D input images
 - model.add(Flatten(input_shape=(28, 28)))
 
-# First hidden layer with L2 regularization
+#First hidden layer with L2 regularization
 - model.add(Dense(128, activation='relu', kernel_regularizer=l2(0.001)))
 
-# Second hidden layer with dropout
+#Second hidden layer with dropout
 - model.add(Dense(64, activation='relu'))
 - model.add(Dropout(0.3))
 
-# Third hidden layer with dropout
+#Third hidden layer with dropout
 - model.add(Dense(32, activation='relu'))
 - model.add(Dropout(0.2))
 
-# Output layer with softmax for multi-class classification
+#Output layer with softmax for multi-class classification
 - model.add(Dense(10, activation='softmax'))
 
 ---
